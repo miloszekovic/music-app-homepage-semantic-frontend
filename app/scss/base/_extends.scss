@@ -1,0 +1,54 @@
+/* extends */
+
+.floating { 
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -5px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.fade {
+    @include transition(all 0.2s ease-in-out);
+}
+
+.no-fade {
+    @include transition(none);
+}
+
+.hov {
+    opacity: .8;
+    -moz-opacity: .8;
+}
+
+.act {
+    opacity: .6;
+    -moz-opacity: .6;
+}
+
+.block-centering {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    @include translate(-50%, -50%);
+}
+
+.img {
+    width: $full;
+    height: auto;
+    line-height: 0;
+}
+
+.hidding-text {
+    text-indent: $full;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* fonts */
+.base-font {
+    font-family: 'PT Sans', Arial, sans-serif;
+}

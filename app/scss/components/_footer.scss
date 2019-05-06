@@ -1,0 +1,120 @@
+/* footer */
+
+footer {
+    background: $dark;
+    color: $footer-text;
+    @include font-size(1.5, 2);
+    padding: 32px 0;
+
+    @media screen and (max-width: 980px) {
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+
+        @media screen and (max-width: 980px) {
+            display: block;
+        }
+    }
+
+    .logo {
+        @media screen and (max-width: 980px) {
+            padding-bottom: 30px;
+        }
+
+        a {
+            display: block;
+
+            img {
+                @extend .floating;
+                vertical-align: middle;
+    
+                &:first-child {
+                    height: 36px;
+                    width: auto;
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+
+    .soc-nav-copy {
+        display: flex;
+        margin-left: auto;
+        padding-top: 9px;
+
+        @media screen and (max-width: 980px) {
+            display: block;
+            margin-left: 0;
+        }
+
+        .feedback {
+            text-transform: uppercase;
+        }
+
+        .social-icons,
+        .footer-nav ul {
+            display: flex;
+
+            @media screen and (max-width: 980px) {
+                display: block;
+            }
+        }
+
+        .social-icons {
+            border-left: 1px solid $border-dark;
+            border-right: 1px solid $border-dark;
+            height: 20px;
+            padding: 0 12px;
+            margin: 0 26px 0 30px;
+
+            @media screen and (max-width: 980px) {
+                border: 0;
+                margin: 15px 0 0;
+            }
+
+            a {
+                display: block;
+                padding: 0 8px;
+
+                @media screen and (max-width: 980px) {
+                    display: inline-block;
+                } 
+            }
+        }
+
+        .footer-nav ul {
+            @media screen and (max-width: 980px) {
+                padding-top: 15px;
+            }
+            
+            li {
+                padding: 0 4px;
+
+                @media screen and (max-width: 980px) {
+                    display: inline-block;
+                }
+
+                @media screen and (max-width: 420px) {
+                    display: block;
+                    padding: 5px 0;
+                }
+
+                &:last-child {
+                    @media screen and (max-width: 980px) {
+                        display: none;
+                    } 
+                }
+            }
+        }
+
+        p {
+            padding-left: 4px;
+
+            @media screen and (max-width: 980px) {
+                padding: 15px 0 0;
+            }
+        }
+    }
+}

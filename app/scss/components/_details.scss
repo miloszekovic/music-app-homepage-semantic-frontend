@@ -1,0 +1,243 @@
+/* buttons */
+.btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    @include font-size(1.4, 2.2);
+    width: 160px;
+    height: 46px;
+    display: block;
+    border: 1px solid transparent;
+    text-align: center;
+    font-weight: bold;
+    @extend .fade;
+
+    &:hover {
+        @extend .hov;
+    }
+
+    &:active {
+        @extend .act;
+    }
+
+    &--green {
+        background: $green;
+        border-bottom: 3px solid $green-dark;
+        color: rgba($dark, .7);
+
+        &:hover {
+            color: rgba($dark, 1);
+        }
+    }
+
+    &--ghost {
+        background: white;
+        border: 1px solid $border-light;
+
+        i {
+            padding: 0 5px;
+        }
+
+        &:hover {
+            background: $green;
+            border: 1px solid $green;
+            color: white;
+        }
+    }
+}
+
+/* separator line */
+.separator {
+    display: block;
+    width: 60px;
+    height: 6px;
+    background: $green;
+    margin: 20px auto;
+}
+
+/* hr */
+hr {
+    border-top: 1px solid $dark;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+/* tag link */
+.tag {
+    display: inline-block;
+    @include font-size(1.3, 1.6);
+    padding: 3px 10px;
+    text-transform: uppercase;
+    color: $dark;
+    border: 2px solid $border-light;
+    border-left: 8px solid $green;
+
+    &:hover {
+        background: $green;
+        border: 2px solid $green;
+        border-left: 8px solid $green;
+        color: $dark;
+    }
+}
+
+/* tabs */
+.tabs-nav {
+    overflow: hidden;
+    padding: 40px 0;
+
+    @media screen and (max-width: 359px) {
+        padding: 20px 0;
+    }
+
+    ul {
+        text-align: center;
+
+        li {
+            @extend .floating;
+
+            @media screen and (max-width: 359px) {
+                display: block;
+                margin: 0;
+                width: 130px;
+                text-align: center;
+                margin: $center;
+
+                &:last-child {
+                    margin: $center !important;
+                }
+            }
+
+            a {
+                display: block;
+                font-weight: bold;
+                color: $dark;
+                margin: 0 15px;
+                padding: 5px 10px;
+                border-bottom: 3px solid transparent;
+
+                @media screen and (max-width: 359px) {
+                    border-bottom: 0 !important;
+                    padding: 15px 10px;
+                }
+            }
+
+            &.active a {
+                color: $green-dark;
+                border-bottom: 3px solid $green-dark;
+
+                @media screen and (max-width: 359px) {
+                    border-bottom: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+/* cover play */
+.cover-play {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $green;
+
+    img {
+        width: 50% !important;
+        height: 50% !important;
+        margin: auto !important;
+        line-height: 0 !important;
+        z-index: 11 !important;
+    }
+}
+
+/* pagination */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+
+    @media screen and (max-width: 900px) {
+        margin-top: 40px;
+    }
+
+    li {
+        @extend .floating;
+        margin: 0 5px;
+
+        @media screen and (max-width: 480px) {
+            margin: 0;
+        }
+
+        a,
+        span {
+            display: block;
+            padding: 10px 0;
+            text-align: center;
+            width: 45px;
+            border: 1px solid $border-light;
+            background: white;
+            color: $dark;
+            font-weight: bold;
+
+            @media screen and (max-width: 480px) {
+                padding: 3px 0 5px;
+                width: 30px;
+            }
+        }
+
+        a:hover,
+        &.active a {
+            background: $green;
+            border: 1px solid $green;
+            color: white;
+        }
+
+        &.active a {
+            border-bottom: 3px solid $green-dark;
+            padding: 10px 0 8px;
+
+            @media screen and (max-width: 480px) {
+                padding: 3px 0;
+            }
+        }
+
+        span {
+            padding: 7px 0 13px;
+            border: 1px solid transparent;
+
+            @media screen and (max-width: 480px) {
+                padding: 3px 0;
+            }
+        }
+
+        &:first-child {
+            margin-right: 50px;
+
+            @media screen and (max-width: 900px) {
+                display: block;
+                margin: 0;
+                padding-bottom: 15px;
+
+                button {
+                    margin: $center;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-left: 50px;
+
+            @media screen and (max-width: 900px) {
+                display: block;
+                margin: 0;
+                padding-top: 15px;
+
+                button {
+                    margin: $center;
+                }
+            }
+        }
+    }
+}

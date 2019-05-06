@@ -1,0 +1,54 @@
+/* how to */
+
+.how-to-wrapper {
+    background: $bg-color;
+    padding: 80px 0 70px;
+
+    h2 {
+        width: 140px;
+        margin: $center;
+        display: block;
+        text-align: center;
+        background: $bg-color;
+        margin-top: -25px;
+        margin-bottom: 40px;
+    }
+
+    .how-to-card {
+        background: white;
+        height: $full;
+
+        img {
+            @extend .img;
+            border-bottom: 10px solid $green;
+        }
+
+        h5 {
+            padding: 10px 0 0 25px;
+        }
+
+        div {
+            padding: 15px 25px 25px;
+            display: flex;
+
+            @media screen and (max-width: 1380px) {
+                display: block;
+            }
+
+            span {
+                margin-left: auto;
+                padding-top: 4px;
+                @include font-size(1.4, 1.8);
+
+                @media screen and (max-width: 1380px) {
+                    margin: 15px 0 0 0;
+                    display: block;
+                }
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

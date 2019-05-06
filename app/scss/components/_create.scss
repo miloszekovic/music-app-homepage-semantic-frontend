@@ -1,0 +1,63 @@
+/* create your own */
+
+.create-wrapper {
+    background: $bg-color;
+    padding: 70px 0;
+
+    .create-intro,
+    .create-item {
+        height: $full;
+        text-align: center;
+    }
+
+    .create-intro {
+        background: url(#{$img-path}/man-with-guitar.jpg) center no-repeat $dark;
+        background-size: cover;
+        color: white;
+        padding: 30px;
+        display: flex;
+
+        div {
+            margin: auto;
+
+            h3 {
+                color: white;
+
+                @media screen and (max-width: 1180px) {
+                    @include font-size(2.5, 3);
+                }
+            }
+        }
+    }
+
+    .create-item {
+        background: white;
+        padding: 40px;
+
+        @media screen and (max-width: 1180px) {
+            padding: 20px;
+        }
+
+        div {
+            background: $dark;
+            width: 120px;
+            height: 120px;
+            @include rounded-corners(50%);
+            margin: $center;
+            display: flex;
+
+            img {
+                margin: auto;
+            }
+        }
+
+        h4 {
+            margin: 20px 0 12px;
+        }
+
+        .btn {
+            margin: $center;
+            margin-top: 30px;
+        }
+    }
+}

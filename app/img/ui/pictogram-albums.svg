@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="54" viewBox="0 0 70 54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b8dc1e;
+      }
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Rectangle_1_copy_15" data-name="Rectangle 1 copy 15" class="cls-1" d="M1069,187h-2v4h-4v5h-54v-5h-4v-4h-4V151h4v-4h4v-5h54v5h4v4h4v36h-2Zm-64-34h-2v32h2V153Zm2-4v40h2V149h-2Zm54,42V144h-50v50h50v-3Zm4-4V149h-2v40h2v-2Zm4-34h-2v32h2V153Z" transform="translate(-1001 -142)"/>
+  <path id="Rectangle_1_copy_3" data-name="Rectangle 1 copy 3" class="cls-2" d="M1050,153v20a6.521,6.521,0,1,1-6.5-6,6.762,6.762,0,0,1,4.5,1.684v-9.22l-16,4.4V177h-0.4a5.589,5.589,0,0,1,.4,2,6.521,6.521,0,1,1-6.5-6,6.758,6.758,0,0,1,4.5,1.685V156h1.3l18.19-5,0.5,1.915M1025.5,175a4.027,4.027,0,1,0,4.5,4A4.269,4.269,0,0,0,1025.5,175Zm18-6a4.028,4.028,0,1,0,4.5,4A4.269,4.269,0,0,0,1043.5,169Zm-11.5-11.14v3.948l16-4.4v-3.948Z" transform="translate(-1001 -142)"/>
+</svg>

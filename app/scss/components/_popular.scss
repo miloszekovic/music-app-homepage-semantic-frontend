@@ -1,0 +1,92 @@
+/* most popular */
+
+.most-popular-wrapper {
+    background: url(#{$img-path}/popular.jpg) center no-repeat $dark;
+    background-size: cover;
+    padding: 70px 0;
+
+    h2 {
+        text-align: center;
+        color: white;
+        margin-bottom: 60px;
+    }
+
+    .most-popular-card {
+        background: white;
+        height: $full;
+
+        h3 {
+            color: white;
+            @include font-size(1.5, 2.2);
+            text-transform: uppercase;
+            padding: 15px;
+            background: $dark;
+            border-bottom: 7px solid $green;
+        }
+
+        ul {
+            padding: 15px;
+
+            li {
+                display: flex;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid $border-light;
+
+                &:last-child {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        .most-popular-card__link {
+            margin-right: 15px;
+            width: 60px;
+            height: 60px;
+            position: relative;
+
+            img {
+                position: relative;
+                z-index: 1;
+                @extend .img;
+            }
+
+            a {
+                display: block;
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+                &:hover {
+
+                    .cover-play {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        .most-popular-card__details {
+            @include font-size(1.4, 2);
+
+            p {
+                margin-top: -3px;
+            }
+
+            div {
+                margin-top: 4px;
+                display: flex;
+
+                span {
+                    margin-right: 15px;
+                    color: rgba($dark, .6);
+                }
+            }
+        }
+    }
+}

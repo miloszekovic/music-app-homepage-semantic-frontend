@@ -1,0 +1,51 @@
+/* mixing */
+
+@mixin font-size($size:1.6, $line: $size * 1.5) {
+    font-size: ($size * 10) + px;
+    line-height: ($line * 10) + px;
+    font-size: $size + rem;
+    line-height: $line + rem;
+}
+
+@mixin box-shadow($size) {
+    -webkit-box-shadow: $size;
+    -moz-box-shadow: $size;
+    box-shadow: $size;
+}
+
+@mixin rounded-corners($size:50%) {
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+    border-radius: $size;
+}
+
+@mixin transition($transitions) {
+    -moz-transition: $transitions;
+    -o-transition: $transitions;
+    -webkit-transition: $transitions;
+    -ms-transition: $transitions;
+    transition: $transitions;
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}

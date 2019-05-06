@@ -1,0 +1,222 @@
+/* editors pick */
+
+.editors-pick-wrapper {
+    background: url(#{$img-path}/editors.jpg) center no-repeat $dark;
+    background-size: cover;
+    padding: 130px 0 100px;
+
+    @media screen and (max-width: 1280px) {
+        padding: 40px 0 100px;
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+    }
+
+    .tabs-nav ul li {
+    
+        a {
+            color: white;
+        }
+
+        &.active a {
+            color: $green;
+            border-bottom: 3px solid $green;
+        }
+    }
+
+    .editors-pick-grid {
+        margin-top: 30px;
+
+        @media screen and (max-width: 600px) {
+            margin-top: 0;
+        }
+
+        & > div {
+            position: relative;
+
+            @media screen and (max-width: 900px) {
+                width: $full / 3;
+            }
+
+            @media screen and (max-width: 600px) {
+                width: $full;
+            }
+    
+            &:nth-child(1),
+            &:nth-child(5) {
+                z-index: 1;
+                @include scale(.85);
+
+                @media screen and (max-width: 600px) {
+                    @include scale(.8);
+                    margin: -30px 0;
+                }
+            }
+
+            &:nth-child(1) {
+                margin-right: -45px;
+
+                @media screen and (max-width: 1580px) {
+                    margin-right: -35px;
+                }
+
+                @media screen and (max-width: 1380px) {
+                    margin-right: -30px;
+                }
+
+                @media screen and (max-width: 600px) {
+                    @include scale(.8);
+                    margin: -30px 0;
+                }
+            }
+
+            &:nth-child(5) {
+                margin-left: -45px;
+
+                @media screen and (max-width: 1580px) {
+                    margin-left: -35px;
+                }
+
+                @media screen and (max-width: 1380px) {
+                    margin-left: -30px;
+                }
+
+                @media screen and (max-width: 1180px) {
+                    margin-left: -25px;
+                }
+
+                @media screen and (max-width: 600px) {
+                    @include scale(.8);
+                    margin: -30px 0;
+                }
+            }
+    
+            &:nth-child(2),
+            &:nth-child(4) {
+                z-index: 2;
+
+                @media screen and (max-width: 600px) {
+                    @include scale(.8);
+                    margin: -30px 0;
+                }
+            }
+    
+            &:nth-child(3) {
+                z-index: 3;
+                @include scale(1.15);
+
+                @media screen and (max-width: 900px) {
+                    @include scale(.85);
+                    margin-left: -30px;
+                }
+
+                @media screen and (max-width: 600px) {
+                    @include scale(.8);
+                    margin: -30px 0;
+                }
+            }
+        }
+    }
+
+    .editors-pick-card {
+        height: $full;
+        background: white;
+        padding: 15px;
+        @include box-shadow(0 0 2px 2px rgba(0,0,0,.15));
+
+        h5 {
+            @include font-size(1.6, 2.2);
+            font-weight: normal;
+            padding: 10px 0 2px;
+        }
+
+        h6 {
+            @include font-size(2, 2.8);
+        }
+
+        .separator {
+            margin: 15px auto 17px;
+        }
+
+        .editors-pick-card__likes {
+
+            span {
+                @extend .floating;
+                margin: 0 7px;
+                color: rgba($dark, .6);
+
+                &:last-child {
+                    @media screen and (max-width: 1380px) {
+                        margin-top: 10px;
+                    }
+
+                    @media screen and (max-width: 900px) {
+                        margin-top: 0;
+                    }
+
+                    @media screen and (max-width: 650px) {
+                        margin-top: 10px;
+                    }
+
+                    @media screen and (max-width: 600px) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        .editors-pick-card__link-wrapper {
+            position: relative;
+
+            img {
+                position: relative;
+                z-index: 1;
+                @extend .img;
+            }
+
+            .editors-pick-card__link {
+                display: block;
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin-bottom: 5px;
+
+                &:hover {
+
+                    .cover-play {
+                        display: flex;
+                    }
+                }
+            }
+
+            .editors-pick-card__tags {
+                width: $full;
+                position: absolute;
+                z-index: 3;
+                bottom: 15px;
+
+                a {
+                    @extend .floating;
+                    margin: 0 3px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    @include font-size(1.1, 1.4);
+                    color: white;
+                    padding: 3px 8px;
+                    background: rgba($green-dark, .8);
+
+                    @media screen and (max-width: 1380px) {
+                        @include font-size(1, 1.2);
+                        margin: 0 2px;
+                        padding: 2px 4px;
+                    }
+                }
+            }
+        }
+    }
+}

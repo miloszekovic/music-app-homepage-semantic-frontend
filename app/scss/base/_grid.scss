@@ -1,0 +1,125 @@
+/* grid */
+.container {
+    width: 1366px;
+    margin: $center;
+
+    @media screen and (max-width: 1580px) {
+        width: 1180px;
+    }
+
+    @media screen and (max-width: 1380px) {
+        width: 1024px;
+    }
+
+    @media screen and (max-width: 1180px) {
+        width: 900px;
+    }
+
+    @media screen and (max-width: 980px) {
+        width: $full;
+        padding: 0 15px;
+    }
+}
+
+.grid-3,
+.grid-4,
+.grid-6 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -18px;
+    height: $full;
+
+    @media screen and (max-width: 1180px) {
+        margin: 0 -10px;
+    }
+
+    @media screen and (max-width: 600px) {
+        margin: 0;
+    }
+
+    & > div {
+        width: $full / 4;
+        padding: 0 18px;
+
+        @media screen and (max-width: 1180px) {
+            padding: 0 10px;
+        }
+    }
+}
+
+.grid-3 {
+
+    & > div {
+        width: $full / 3;
+
+        @media screen and (max-width: 899px) {
+            width: $full / 2;
+            padding: 10px;
+
+            &:last-child {
+                width: $full;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            width: $full;
+            padding: 10px 0;
+        }
+    }
+}
+
+.grid-4 {
+
+    & > div {
+        @media screen and (max-width: 900px) {
+            width: $full / 2;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: $full;
+            padding: 10px 0;
+        }
+    }
+}
+
+.grid-5 {
+    height: $full;
+    text-align: center;
+
+    & > div {
+        @extend .floating;
+        width: $full / 5;
+    }
+}
+
+.grid-6 {
+
+    & > div {
+        width: $full / 6;
+        padding: 0 18px 36px;
+
+        @media screen and (max-width: 1180px) {
+            padding: 0 10px 20px;
+        }
+
+        @media screen and (max-width: 900px) {
+            width: $full / 3;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: $full / 2;
+            padding: 10px 0;
+
+            &:nth-child(1n) {
+                padding-right: 10px;
+            }
+
+            &:nth-child(2n) {
+                padding-left: 10px;
+                padding-right: 0;
+            }
+        }
+    }
+}

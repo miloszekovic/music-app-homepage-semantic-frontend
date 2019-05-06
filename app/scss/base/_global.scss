@@ -1,0 +1,71 @@
+/* global */
+
+html,
+body {
+    height: 100vh;
+    min-height: 100vh;
+    min-width: 318px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: white;
+    color: $dark;
+    @include font-size(1.6, 2.2);
+}
+
+body,
+body *, 
+input, 
+textarea,
+select {
+    @extend .base-font;
+}
+
+a { 
+    color: $green;
+    text-decoration: none;
+    @extend .fade;
+    
+    &:hover { 
+        @extend .hov;
+        color: $green;
+    }
+    
+    &:active {
+        @extend .act;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $dark;
+}
+
+h1 {
+    @include font-size(4, 5.2);
+}
+
+h2 {
+    @include font-size(3.5, 4);
+}
+
+h3,
+h4 {
+    @include font-size(2.8, 4);
+}
+
+h5 {
+    @include font-size(2, 3);
+}
+
+h6 {
+    @include font-size(1.6, 2);
+}
